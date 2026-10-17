@@ -1,0 +1,12 @@
+.env
+.git
+.claude
+**/node_modules
+**/__pycache__
+backend/.venv
+frontend/dist
+neo4j_data
+tmp
+output
+docs
+data/pdf/uploaded_live

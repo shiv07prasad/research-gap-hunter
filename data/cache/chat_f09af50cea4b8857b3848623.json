@@ -1,0 +1,1 @@
+{"proposes": ["RetGen"], "uses": ["DenseRet", "Seq2Seq Generator", "Large Language Model", "Knowledge Graph"], "datasets": ["Natural Questions", "HotpotQA"], "tasks": ["Open-domain QA", "Hallucination Reduction"]}

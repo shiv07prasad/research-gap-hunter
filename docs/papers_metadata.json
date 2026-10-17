@@ -1,0 +1,166 @@
+[
+  {
+    "id": "P01", "pdf_file": "P01.pdf",
+    "title": "DenseRet: Learning Dual-Encoder Representations for Open-Domain Passage Retrieval",
+    "abstract": "", "year": 2020, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Anders Vik", "institution": "Fjordline Institute"}],
+    "cites": [],
+    "ground_truth": {"proposes": ["DenseRet"], "uses": ["Dual Encoder", "Contrastive Learning"], "datasets": ["Natural Questions"], "tasks": ["Open-domain QA", "Passage Retrieval"]}
+  },
+  {
+    "id": "P02", "pdf_file": "P02.pdf",
+    "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction",
+    "abstract": "", "year": 2020, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Priya Raman", "institution": "Fjordline Institute"}],
+    "cites": [],
+    "ground_truth": {"proposes": ["RelForge"], "uses": ["Transformer Encoder", "Knowledge Graph"], "datasets": ["TACRED"], "tasks": ["Relation Extraction", "Knowledge Graph Construction"]}
+  },
+  {
+    "id": "P03", "pdf_file": "P03.pdf",
+    "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks",
+    "abstract": "", "year": 2021, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Anders Vik", "institution": "Fjordline Institute"}],
+    "cites": [{"id": "P01", "intent": "method"}],
+    "ground_truth": {"proposes": ["RetGen"], "uses": ["DenseRet", "Seq2Seq Generator"], "datasets": ["Natural Questions", "HotpotQA"], "tasks": ["Open-domain QA"]}
+  },
+  {
+    "id": "P04", "pdf_file": "P04.pdf",
+    "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models",
+    "abstract": "", "year": 2022, "venue": "Transactions on Language Evaluation (TLE)",
+    "authors": [{"name": "Hana Novak", "institution": "Northbridge University"}],
+    "cites": [{"id": "P03", "intent": "background"}],
+    "ground_truth": {"proposes": ["FactProbe"], "uses": ["Large Language Model"], "datasets": ["FactProbe"], "tasks": ["Hallucination Detection"]}
+  },
+  {
+    "id": "P05", "pdf_file": "P05.pdf",
+    "title": "GraphHop: Knowledge Graph-Augmented Retrieval for Multi-Hop Question Answering",
+    "abstract": "", "year": 2023, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Lena Okafor", "institution": "Northbridge University"}],
+    "cites": [{"id": "P02", "intent": "method"}, {"id": "P03", "intent": "method"}],
+    "ground_truth": {"proposes": ["GraphHop"], "uses": ["Knowledge Graph", "RelForge", "RetGen"], "datasets": ["HotpotQA"], "tasks": ["Multi-hop QA"]}
+  },
+  {
+    "id": "P06", "pdf_file": "P06.pdf",
+    "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers",
+    "abstract": "", "year": 2023, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Ravi Menon", "institution": "Northbridge University"}],
+    "cites": [{"id": "P02", "intent": "method"}, {"id": "P03", "intent": "background"}, {"id": "P04", "intent": "result"}],
+    "ground_truth": {"proposes": ["SubGround"], "uses": ["Knowledge Graph", "Graph Neural Network", "Large Language Model"], "datasets": ["HotpotQA", "FactProbe"], "tasks": ["Multi-hop QA", "Hallucination Reduction"]}
+  },
+  {
+    "id": "P07", "pdf_file": "P07.pdf",
+    "title": "CommSumm: Community Summaries for Answering Global Questions over Knowledge Graphs",
+    "abstract": "", "year": 2024, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Lena Okafor", "institution": "Northbridge University"}],
+    "cites": [{"id": "P05", "intent": "method"}, {"id": "P06", "intent": "background"}],
+    "ground_truth": {"proposes": ["CommSumm"], "uses": ["Knowledge Graph", "Leiden Clustering", "Large Language Model"], "datasets": ["GlobalQ-200"], "tasks": ["Query-focused Summarization"]}
+  },
+  {
+    "id": "P08", "pdf_file": "P08.pdf",
+    "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification",
+    "abstract": "", "year": 2024, "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [{"name": "Lena Okafor", "institution": "Northbridge University"}, {"name": "Ravi Menon", "institution": "Northbridge University"}],
+    "cites": [{"id": "P04", "intent": "result"}, {"id": "P06", "intent": "method"}, {"id": "P17", "intent": "method"}],
+    "ground_truth": {"proposes": ["GraphVerify"], "uses": ["Knowledge Graph", "SubGround", "Relational Fact Lattice", "Large Language Model"], "datasets": ["FactProbe", "HotpotQA"], "tasks": ["Hallucination Reduction", "Fact Verification"]}
+  },
+  {
+    "id": "P09", "pdf_file": "P09.pdf",
+    "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text",
+    "abstract": "", "year": 2023, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Sofia Brandt", "institution": "Halden Medical Institute"}],
+    "cites": [{"id": "P03", "intent": "background"}, {"id": "P04", "intent": "result"}],
+    "ground_truth": {"proposes": ["CuraLM-70B"], "uses": ["Large Language Model", "Instruction Tuning"], "datasets": ["MedQA", "PubMedQA"], "tasks": ["Medical QA"]}
+  },
+  {
+    "id": "P10", "pdf_file": "P10.pdf",
+    "title": "ClinoKG: Constructing a Medical Knowledge Graph from Biomedical Literature",
+    "abstract": "", "year": 2023, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Priya Raman", "institution": "Fjordline Institute"}, {"name": "Tomas Reyes", "institution": "Halden Medical Institute"}],
+    "cites": [{"id": "P02", "intent": "method"}, {"id": "P17", "intent": "method"}],
+    "ground_truth": {"proposes": ["ClinoKG"], "uses": ["RelForge", "Knowledge Graph", "Relational Fact Lattice"], "datasets": ["PubMed Abstracts"], "tasks": ["Knowledge Graph Construction"]}
+  },
+  {
+    "id": "P11", "pdf_file": "P11.pdf",
+    "title": "MedRetGen: Retrieval-Augmented Generation for Medical Question Answering",
+    "abstract": "", "year": 2024, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Sofia Brandt", "institution": "Halden Medical Institute"}, {"name": "Daniel Osei", "institution": "Halden Medical Institute"}],
+    "cites": [{"id": "P03", "intent": "method"}, {"id": "P09", "intent": "method"}],
+    "ground_truth": {"proposes": ["MedRetGen"], "uses": ["RetGen", "DenseRet", "CuraLM-70B"], "datasets": ["MedQA", "PubMedQA"], "tasks": ["Medical QA"]}
+  },
+  {
+    "id": "P12", "pdf_file": "P12.pdf",
+    "title": "ClinHalluEval: Measuring Hallucination in Clinical Language Models",
+    "abstract": "", "year": 2024, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Sofia Brandt", "institution": "Halden Medical Institute"}],
+    "cites": [{"id": "P04", "intent": "method"}, {"id": "P09", "intent": "result"}, {"id": "P17", "intent": "background"}],
+    "ground_truth": {"proposes": ["ClinHalluEval"], "uses": ["FactProbe", "Large Language Model"], "datasets": ["ClinHalluEval", "MedQA"], "tasks": ["Hallucination Detection", "Medical QA"]}
+  },
+  {
+    "id": "P13", "pdf_file": "P13.pdf",
+    "title": "TinyDistill: Knowledge Distillation into Compact Language Models",
+    "abstract": "", "year": 2023, "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [{"name": "Mei Tanaka", "institution": "Kestrel AI Lab"}],
+    "cites": [{"id": "P03", "intent": "background"}],
+    "ground_truth": {"proposes": ["TinyDistill"], "uses": ["Knowledge Distillation", "Small Language Model"], "datasets": ["Natural Questions"], "tasks": ["Model Compression", "Open-domain QA"]}
+  },
+  {
+    "id": "P14", "pdf_file": "P14.pdf",
+    "title": "LoRA-QA: Parameter-Efficient Fine-Tuning of Sub-8B Models for Question Answering",
+    "abstract": "", "year": 2024, "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [{"name": "Mei Tanaka", "institution": "Kestrel AI Lab"}],
+    "cites": [{"id": "P13", "intent": "method"}],
+    "ground_truth": {"proposes": ["LoRA-QA"], "uses": ["Low-Rank Adaptation", "Small Language Model", "TinyDistill"], "datasets": ["Natural Questions", "HotpotQA"], "tasks": ["Open-domain QA"]}
+  },
+  {
+    "id": "P15", "pdf_file": "P15.pdf",
+    "title": "SmallRAG: When Compact Models with Retrieval Outperform Large Models",
+    "abstract": "", "year": 2024, "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [{"name": "Mei Tanaka", "institution": "Kestrel AI Lab"}, {"name": "Jonah Pierce", "institution": "Kestrel AI Lab"}],
+    "cites": [{"id": "P03", "intent": "method"}, {"id": "P13", "intent": "method"}],
+    "ground_truth": {"proposes": ["SmallRAG"], "uses": ["RetGen", "TinyDistill", "Small Language Model"], "datasets": ["HotpotQA", "Natural Questions"], "tasks": ["Open-domain QA", "Multi-hop QA"]}
+  },
+  {
+    "id": "P16", "pdf_file": "P16.pdf",
+    "title": "PocketClinic: An On-Device Clinical Assistant Built on a 3B-Parameter Model",
+    "abstract": "", "year": 2025, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Jonah Pierce", "institution": "Kestrel AI Lab"}, {"name": "Daniel Osei", "institution": "Kestrel AI Lab"}],
+    "cites": [{"id": "P09", "intent": "background"}, {"id": "P14", "intent": "method"}, {"id": "P17", "intent": "background"}],
+    "ground_truth": {"proposes": ["PocketClinic"], "uses": ["LoRA-QA", "Small Language Model"], "datasets": ["MedQA"], "tasks": ["Medical QA"]}
+  },
+  {
+    "id": "P17", "pdf_file": "P17.pdf",
+    "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators",
+    "abstract": "", "year": 2022, "venue": "Clinical Informatics Letters (CIL)",
+    "authors": [{"name": "Priya Raman", "institution": "Fjordline Institute"}],
+    "cites": [{"id": "P02", "intent": "method"}],
+    "ground_truth": {"proposes": ["Relational Fact Lattice"], "uses": ["Knowledge Graph", "Small Language Model", "RelForge"], "datasets": ["RxInteract-5K"], "tasks": ["Drug Interaction Lookup", "Hallucination Reduction"]},
+    "demo_role": "hidden_gem: abstract avoids KG/hallucination/small wording; cited by 7 papers"
+  },
+  {
+    "id": "P18", "pdf_file": "P18.pdf",
+    "title": "CuraGraph: Knowledge Graph-Grounded Medical Question Answering with Large Language Models",
+    "abstract": "", "year": 2025, "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [{"name": "Tomas Reyes", "institution": "Halden Medical Institute"}, {"name": "Daniel Osei", "institution": "Halden Medical Institute"}],
+    "cites": [{"id": "P06", "intent": "method"}, {"id": "P08", "intent": "method"}, {"id": "P10", "intent": "method"}, {"id": "P11", "intent": "result"}, {"id": "P17", "intent": "background"}],
+    "ground_truth": {"proposes": ["CuraGraph"], "uses": ["Knowledge Graph", "ClinoKG", "SubGround", "GraphVerify", "CuraLM-70B"], "datasets": ["PubMedQA"], "tasks": ["Medical QA", "Hallucination Reduction"]},
+    "demo_role": "closest_competitor: KG + medical, but 70B model"
+  },
+  {
+    "id": "P19", "pdf_file": "P19.pdf",
+    "title": "TinyVeri: Knowledge Graph Verification for 3B-Parameter Language Models",
+    "abstract": "", "year": 2025, "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [{"name": "Ravi Menon", "institution": "Northbridge University"}, {"name": "Jonah Pierce", "institution": "Kestrel AI Lab"}],
+    "cites": [{"id": "P08", "intent": "method"}, {"id": "P15", "intent": "method"}, {"id": "P17", "intent": "method"}],
+    "ground_truth": {"proposes": ["TinyVeri"], "uses": ["GraphVerify", "Knowledge Graph", "Small Language Model", "SmallRAG", "Relational Fact Lattice"], "datasets": ["HotpotQA", "FactProbe"], "tasks": ["Hallucination Reduction", "Multi-hop QA"]},
+    "demo_role": "KG + small, but general domain (not medical)"
+  },
+  {
+    "id": "P20", "pdf_file": "P20.pdf",
+    "title": "Mitigating Hallucination in Language Models: A Survey of Retrieval and Graph-Based Approaches",
+    "abstract": "", "year": 2025, "venue": "Transactions on Language Evaluation (TLE)",
+    "authors": [{"name": "Hana Novak", "institution": "Northbridge University"}],
+    "cites": [{"id": "P04", "intent": "background"}, {"id": "P06", "intent": "background"}, {"id": "P08", "intent": "background"}, {"id": "P09", "intent": "background"}, {"id": "P12", "intent": "background"}, {"id": "P15", "intent": "background"}, {"id": "P17", "intent": "background"}],
+    "ground_truth": {"proposes": [], "uses": [], "datasets": [], "tasks": ["Hallucination Reduction"]},
+    "demo_role": "survey hub"
+  }
+]

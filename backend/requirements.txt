@@ -1,0 +1,9 @@
+# Pinned to the versions the demo was rehearsed with. pymupdf in particular must match:
+# the LLM cache is keyed on the extracted PDF text, so a different version could miss the cache.
+fastapi==0.143.3
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+neo4j==6.4.1
+openai==3.33.0
+pymupdf==1.28.2
+python-dotenv==1.2.4

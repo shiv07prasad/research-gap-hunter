@@ -1,0 +1,1 @@
+{"proposes": ["GraphVerify"], "uses": ["Large Language Model", "SubGround", "Relational Fact Lattice"], "datasets": ["FactProbe", "HotpotQA"], "tasks": ["Hallucination Reduction", "Fact Verification"]}

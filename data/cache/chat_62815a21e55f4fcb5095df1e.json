@@ -1,0 +1,1 @@
+{"proposes": ["RelForge"], "uses": ["Transformer Encoder", "Knowledge Graph", "Relation Extraction"], "datasets": ["TACRED"], "tasks": ["Relation Extraction", "Knowledge Graph Construction"]}

@@ -1,0 +1,11 @@
+.env
+.claude/
+neo4j_data/
+tmp/
+output/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+data/pdf/uploaded_live/

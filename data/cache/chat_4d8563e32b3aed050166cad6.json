@@ -1,0 +1,1 @@
+{"proposes": ["SmallRAG"], "uses": ["RetGen", "TinyDistill", "Small Language Model", "Retrieval"], "datasets": ["Natural Questions", "HotpotQA"], "tasks": ["Open-domain QA", "Multi-hop QA"]}

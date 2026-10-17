@@ -1,0 +1,1 @@
+{"proposes": ["ClinHalluEval"], "uses": ["FactProbe", "CuraLM-70B", "MedQA"], "datasets": ["ClinHalluEval"], "tasks": ["Hallucination Detection", "Medical QA"]}

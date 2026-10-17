@@ -1,0 +1,467 @@
+[
+  {
+    "id": "P01",
+    "pdf_file": "P01.pdf",
+    "title": "DenseRet: Learning Dual-Encoder Representations for Open-Domain Passage Retrieval",
+    "abstract": "",
+    "year": 2020,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Anders Vik",
+        "institution": "Fjordline Institute"
+      }
+    ],
+    "cites": []
+  },
+  {
+    "id": "P02",
+    "pdf_file": "P02.pdf",
+    "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction",
+    "abstract": "",
+    "year": 2020,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Priya Raman",
+        "institution": "Fjordline Institute"
+      }
+    ],
+    "cites": []
+  },
+  {
+    "id": "P03",
+    "pdf_file": "P03.pdf",
+    "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks",
+    "abstract": "",
+    "year": 2021,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Anders Vik",
+        "institution": "Fjordline Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P01",
+        "intent": "method",
+        "title": "DenseRet: Learning Dual-Encoder Representations for Open-Domain Passage Retrieval"
+      }
+    ]
+  },
+  {
+    "id": "P04",
+    "pdf_file": "P04.pdf",
+    "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models",
+    "abstract": "",
+    "year": 2022,
+    "venue": "Transactions on Language Evaluation (TLE)",
+    "authors": [
+      {
+        "name": "Hana Novak",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P03",
+        "intent": "background",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      }
+    ]
+  },
+  {
+    "id": "P05",
+    "pdf_file": "P05.pdf",
+    "title": "GraphHop: Knowledge Graph-Augmented Retrieval for Multi-Hop Question Answering",
+    "abstract": "",
+    "year": 2023,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Lena Okafor",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P02",
+        "intent": "method",
+        "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction"
+      },
+      {
+        "id": "P03",
+        "intent": "method",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      }
+    ]
+  },
+  {
+    "id": "P06",
+    "pdf_file": "P06.pdf",
+    "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers",
+    "abstract": "",
+    "year": 2023,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Ravi Menon",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P02",
+        "intent": "method",
+        "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction"
+      },
+      {
+        "id": "P03",
+        "intent": "background",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      },
+      {
+        "id": "P04",
+        "intent": "result",
+        "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models"
+      }
+    ]
+  },
+  {
+    "id": "P07",
+    "pdf_file": "P07.pdf",
+    "title": "CommSumm: Community Summaries for Answering Global Questions over Knowledge Graphs",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Lena Okafor",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P05",
+        "intent": "method",
+        "title": "GraphHop: Knowledge Graph-Augmented Retrieval for Multi-Hop Question Answering"
+      },
+      {
+        "id": "P06",
+        "intent": "background",
+        "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers"
+      }
+    ]
+  },
+  {
+    "id": "P08",
+    "pdf_file": "P08.pdf",
+    "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Conference on Natural Language Systems (CNLS)",
+    "authors": [
+      {
+        "name": "Lena Okafor",
+        "institution": "Northbridge University"
+      },
+      {
+        "name": "Ravi Menon",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P04",
+        "intent": "result",
+        "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models"
+      },
+      {
+        "id": "P06",
+        "intent": "method",
+        "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers"
+      },
+      {
+        "id": "P17",
+        "intent": "method",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ]
+  },
+  {
+    "id": "P09",
+    "pdf_file": "P09.pdf",
+    "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text",
+    "abstract": "",
+    "year": 2023,
+    "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [
+      {
+        "name": "Sofia Brandt",
+        "institution": "Halden Medical Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P03",
+        "intent": "background",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      },
+      {
+        "id": "P04",
+        "intent": "result",
+        "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models"
+      }
+    ]
+  },
+  {
+    "id": "P10",
+    "pdf_file": "P10.pdf",
+    "title": "ClinoKG: Constructing a Medical Knowledge Graph from Biomedical Literature",
+    "abstract": "",
+    "year": 2023,
+    "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [
+      {
+        "name": "Priya Raman",
+        "institution": "Fjordline Institute"
+      },
+      {
+        "name": "Tomas Reyes",
+        "institution": "Halden Medical Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P02",
+        "intent": "method",
+        "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction"
+      },
+      {
+        "id": "P17",
+        "intent": "method",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ]
+  },
+  {
+    "id": "P11",
+    "pdf_file": "P11.pdf",
+    "title": "MedRetGen: Retrieval-Augmented Generation for Medical Question Answering",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [
+      {
+        "name": "Sofia Brandt",
+        "institution": "Halden Medical Institute"
+      },
+      {
+        "name": "Daniel Osei",
+        "institution": "Halden Medical Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P03",
+        "intent": "method",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      },
+      {
+        "id": "P09",
+        "intent": "method",
+        "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text"
+      }
+    ]
+  },
+  {
+    "id": "P12",
+    "pdf_file": "P12.pdf",
+    "title": "ClinHalluEval: Measuring Hallucination in Clinical Language Models",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [
+      {
+        "name": "Sofia Brandt",
+        "institution": "Halden Medical Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P04",
+        "intent": "method",
+        "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models"
+      },
+      {
+        "id": "P09",
+        "intent": "result",
+        "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text"
+      },
+      {
+        "id": "P17",
+        "intent": "background",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ]
+  },
+  {
+    "id": "P13",
+    "pdf_file": "P13.pdf",
+    "title": "TinyDistill: Knowledge Distillation into Compact Language Models",
+    "abstract": "",
+    "year": 2023,
+    "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [
+      {
+        "name": "Mei Tanaka",
+        "institution": "Kestrel AI Lab"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P03",
+        "intent": "background",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      }
+    ]
+  },
+  {
+    "id": "P14",
+    "pdf_file": "P14.pdf",
+    "title": "LoRA-QA: Parameter-Efficient Fine-Tuning of Sub-8B Models for Question Answering",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [
+      {
+        "name": "Mei Tanaka",
+        "institution": "Kestrel AI Lab"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P13",
+        "intent": "method",
+        "title": "TinyDistill: Knowledge Distillation into Compact Language Models"
+      }
+    ]
+  },
+  {
+    "id": "P15",
+    "pdf_file": "P15.pdf",
+    "title": "SmallRAG: When Compact Models with Retrieval Outperform Large Models",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Workshop on Efficient Language Models (WELM)",
+    "authors": [
+      {
+        "name": "Mei Tanaka",
+        "institution": "Kestrel AI Lab"
+      },
+      {
+        "name": "Jonah Pierce",
+        "institution": "Kestrel AI Lab"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P03",
+        "intent": "method",
+        "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks"
+      },
+      {
+        "id": "P13",
+        "intent": "method",
+        "title": "TinyDistill: Knowledge Distillation into Compact Language Models"
+      }
+    ]
+  },
+  {
+    "id": "P16",
+    "pdf_file": "P16.pdf",
+    "title": "PocketClinic: An On-Device Clinical Assistant Built on a 3B-Parameter Model",
+    "abstract": "",
+    "year": 2025,
+    "venue": "Journal of Clinical AI (JCAI)",
+    "authors": [
+      {
+        "name": "Jonah Pierce",
+        "institution": "Kestrel AI Lab"
+      },
+      {
+        "name": "Daniel Osei",
+        "institution": "Kestrel AI Lab"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P09",
+        "intent": "background",
+        "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text"
+      },
+      {
+        "id": "P14",
+        "intent": "method",
+        "title": "LoRA-QA: Parameter-Efficient Fine-Tuning of Sub-8B Models for Question Answering"
+      },
+      {
+        "id": "P17",
+        "intent": "background",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ]
+  },
+  {
+    "id": "P20",
+    "pdf_file": "P20.pdf",
+    "title": "Mitigating Hallucination in Language Models: A Survey of Retrieval and Graph-Based Approaches",
+    "abstract": "",
+    "year": 2025,
+    "venue": "Transactions on Language Evaluation (TLE)",
+    "authors": [
+      {
+        "name": "Hana Novak",
+        "institution": "Northbridge University"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P04",
+        "intent": "background",
+        "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models"
+      },
+      {
+        "id": "P06",
+        "intent": "background",
+        "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers"
+      },
+      {
+        "id": "P08",
+        "intent": "background",
+        "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification"
+      },
+      {
+        "id": "P09",
+        "intent": "background",
+        "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text"
+      },
+      {
+        "id": "P12",
+        "intent": "background",
+        "title": "ClinHalluEval: Measuring Hallucination in Clinical Language Models"
+      },
+      {
+        "id": "P15",
+        "intent": "background",
+        "title": "SmallRAG: When Compact Models with Retrieval Outperform Large Models"
+      },
+      {
+        "id": "P17",
+        "intent": "background",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ]
+  }
+]

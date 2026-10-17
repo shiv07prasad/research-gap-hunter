@@ -1,0 +1,1 @@
+{"proposes": ["SubGround"], "uses": ["RelForge", "Knowledge Graph", "Large Language Model", "Retrieval-augmented generation", "Graph Neural Network"], "datasets": ["HotpotQA", "FactProbe"], "tasks": ["Multi-hop QA", "Hallucination Reduction"], "limitations": ["Graph coverage as a limitation"], "resolves": []}

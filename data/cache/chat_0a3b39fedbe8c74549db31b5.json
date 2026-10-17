@@ -1,0 +1,1 @@
+{"proposes": ["FactProbe"], "uses": ["RetGen", "Large Language Model", "Retrieval-augmented generation"], "datasets": ["FactProbe"], "tasks": ["Hallucination Reduction"]}

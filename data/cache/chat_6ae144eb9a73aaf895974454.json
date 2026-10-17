@@ -1,0 +1,1 @@
+{"proposes": ["CommSumm"], "uses": ["Knowledge Graph", "Large Language Model", "Leiden Clustering", "GraphHop", "SubGround"], "datasets": ["GlobalQ-200"], "tasks": ["Query-focused Summarization"], "limitations": ["Maintaining factual detail"], "resolves": []}

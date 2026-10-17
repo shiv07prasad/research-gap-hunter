@@ -1,0 +1,1 @@
+{"limitations": ["Residual errors from relation extraction", "Requires explicit path selection", "Dependent on intermediate relations"], "resolves": ["Multi-hop composition challenge"]}

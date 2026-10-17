@@ -1,0 +1,1 @@
+{"proposes": [], "uses": ["Hallucination Reduction", "FactProbe", "ClinHalluEval", "Retrieval", "Graph-Based Mitigation"], "datasets": [], "tasks": ["Hallucination Reduction"], "limitations": ["Requires large training data", "Weak on long answers", "Difficult entity boundaries"], "resolves": []}

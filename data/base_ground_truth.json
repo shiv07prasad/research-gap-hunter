@@ -1,0 +1,341 @@
+[
+  {
+    "id": "P01",
+    "title": "DenseRet: Learning Dual-Encoder Representations for Open-Domain Passage Retrieval",
+    "ground_truth": {
+      "proposes": [
+        "DenseRet"
+      ],
+      "uses": [
+        "Dual Encoder",
+        "Contrastive Learning"
+      ],
+      "datasets": [
+        "Natural Questions"
+      ],
+      "tasks": [
+        "Open-domain QA",
+        "Passage Retrieval"
+      ]
+    }
+  },
+  {
+    "id": "P02",
+    "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction",
+    "ground_truth": {
+      "proposes": [
+        "RelForge"
+      ],
+      "uses": [
+        "Transformer Encoder",
+        "Knowledge Graph"
+      ],
+      "datasets": [
+        "TACRED"
+      ],
+      "tasks": [
+        "Relation Extraction",
+        "Knowledge Graph Construction"
+      ]
+    }
+  },
+  {
+    "id": "P03",
+    "title": "Retrieve-then-Generate: Augmenting Language Models with Retrieved Passages for Knowledge-Intensive Tasks",
+    "ground_truth": {
+      "proposes": [
+        "RetGen"
+      ],
+      "uses": [
+        "DenseRet",
+        "Seq2Seq Generator"
+      ],
+      "datasets": [
+        "Natural Questions",
+        "HotpotQA"
+      ],
+      "tasks": [
+        "Open-domain QA"
+      ]
+    }
+  },
+  {
+    "id": "P04",
+    "title": "FactProbe: A Benchmark for Measuring Hallucination in Large Language Models",
+    "ground_truth": {
+      "proposes": [
+        "FactProbe"
+      ],
+      "uses": [
+        "Large Language Model"
+      ],
+      "datasets": [
+        "FactProbe"
+      ],
+      "tasks": [
+        "Hallucination Detection"
+      ]
+    }
+  },
+  {
+    "id": "P05",
+    "title": "GraphHop: Knowledge Graph-Augmented Retrieval for Multi-Hop Question Answering",
+    "ground_truth": {
+      "proposes": [
+        "GraphHop"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "RelForge",
+        "RetGen"
+      ],
+      "datasets": [
+        "HotpotQA"
+      ],
+      "tasks": [
+        "Multi-hop QA"
+      ]
+    }
+  },
+  {
+    "id": "P06",
+    "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers",
+    "ground_truth": {
+      "proposes": [
+        "SubGround"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "Graph Neural Network",
+        "Large Language Model"
+      ],
+      "datasets": [
+        "HotpotQA",
+        "FactProbe"
+      ],
+      "tasks": [
+        "Multi-hop QA",
+        "Hallucination Reduction"
+      ]
+    }
+  },
+  {
+    "id": "P07",
+    "title": "CommSumm: Community Summaries for Answering Global Questions over Knowledge Graphs",
+    "ground_truth": {
+      "proposes": [
+        "CommSumm"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "Leiden Clustering",
+        "Large Language Model"
+      ],
+      "datasets": [
+        "GlobalQ-200"
+      ],
+      "tasks": [
+        "Query-focused Summarization"
+      ]
+    }
+  },
+  {
+    "id": "P08",
+    "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification",
+    "ground_truth": {
+      "proposes": [
+        "GraphVerify"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "SubGround",
+        "Relational Fact Lattice",
+        "Large Language Model"
+      ],
+      "datasets": [
+        "FactProbe",
+        "HotpotQA"
+      ],
+      "tasks": [
+        "Hallucination Reduction",
+        "Fact Verification"
+      ]
+    }
+  },
+  {
+    "id": "P09",
+    "title": "CuraLM-70B: Adapting a Large Language Model to Clinical Text",
+    "ground_truth": {
+      "proposes": [
+        "CuraLM-70B"
+      ],
+      "uses": [
+        "Large Language Model",
+        "Instruction Tuning"
+      ],
+      "datasets": [
+        "MedQA",
+        "PubMedQA"
+      ],
+      "tasks": [
+        "Medical QA"
+      ]
+    }
+  },
+  {
+    "id": "P10",
+    "title": "ClinoKG: Constructing a Medical Knowledge Graph from Biomedical Literature",
+    "ground_truth": {
+      "proposes": [
+        "ClinoKG"
+      ],
+      "uses": [
+        "RelForge",
+        "Knowledge Graph",
+        "Relational Fact Lattice"
+      ],
+      "datasets": [
+        "PubMed Abstracts"
+      ],
+      "tasks": [
+        "Knowledge Graph Construction"
+      ]
+    }
+  },
+  {
+    "id": "P11",
+    "title": "MedRetGen: Retrieval-Augmented Generation for Medical Question Answering",
+    "ground_truth": {
+      "proposes": [
+        "MedRetGen"
+      ],
+      "uses": [
+        "RetGen",
+        "DenseRet",
+        "CuraLM-70B"
+      ],
+      "datasets": [
+        "MedQA",
+        "PubMedQA"
+      ],
+      "tasks": [
+        "Medical QA"
+      ]
+    }
+  },
+  {
+    "id": "P12",
+    "title": "ClinHalluEval: Measuring Hallucination in Clinical Language Models",
+    "ground_truth": {
+      "proposes": [
+        "ClinHalluEval"
+      ],
+      "uses": [
+        "FactProbe",
+        "Large Language Model"
+      ],
+      "datasets": [
+        "ClinHalluEval",
+        "MedQA"
+      ],
+      "tasks": [
+        "Hallucination Detection",
+        "Medical QA"
+      ]
+    }
+  },
+  {
+    "id": "P13",
+    "title": "TinyDistill: Knowledge Distillation into Compact Language Models",
+    "ground_truth": {
+      "proposes": [
+        "TinyDistill"
+      ],
+      "uses": [
+        "Knowledge Distillation",
+        "Small Language Model"
+      ],
+      "datasets": [
+        "Natural Questions"
+      ],
+      "tasks": [
+        "Model Compression",
+        "Open-domain QA"
+      ]
+    }
+  },
+  {
+    "id": "P14",
+    "title": "LoRA-QA: Parameter-Efficient Fine-Tuning of Sub-8B Models for Question Answering",
+    "ground_truth": {
+      "proposes": [
+        "LoRA-QA"
+      ],
+      "uses": [
+        "Low-Rank Adaptation",
+        "Small Language Model",
+        "TinyDistill"
+      ],
+      "datasets": [
+        "Natural Questions",
+        "HotpotQA"
+      ],
+      "tasks": [
+        "Open-domain QA"
+      ]
+    }
+  },
+  {
+    "id": "P15",
+    "title": "SmallRAG: When Compact Models with Retrieval Outperform Large Models",
+    "ground_truth": {
+      "proposes": [
+        "SmallRAG"
+      ],
+      "uses": [
+        "RetGen",
+        "TinyDistill",
+        "Small Language Model"
+      ],
+      "datasets": [
+        "HotpotQA",
+        "Natural Questions"
+      ],
+      "tasks": [
+        "Open-domain QA",
+        "Multi-hop QA"
+      ]
+    }
+  },
+  {
+    "id": "P16",
+    "title": "PocketClinic: An On-Device Clinical Assistant Built on a 3B-Parameter Model",
+    "ground_truth": {
+      "proposes": [
+        "PocketClinic"
+      ],
+      "uses": [
+        "LoRA-QA",
+        "Small Language Model"
+      ],
+      "datasets": [
+        "MedQA"
+      ],
+      "tasks": [
+        "Medical QA"
+      ]
+    }
+  },
+  {
+    "id": "P20",
+    "title": "Mitigating Hallucination in Language Models: A Survey of Retrieval and Graph-Based Approaches",
+    "ground_truth": {
+      "proposes": [],
+      "uses": [],
+      "datasets": [],
+      "tasks": [
+        "Hallucination Reduction"
+      ]
+    }
+  }
+]

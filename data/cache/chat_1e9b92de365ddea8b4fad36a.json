@@ -1,0 +1,1 @@
+{"proposes": ["ClinoKG"], "uses": ["RelForge", "Knowledge Graph", "Relation Extraction"], "datasets": ["PubMedQA"], "tasks": ["Knowledge Graph Construction"]}

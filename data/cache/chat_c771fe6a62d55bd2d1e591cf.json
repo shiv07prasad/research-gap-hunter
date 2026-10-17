@@ -1,0 +1,1 @@
+{"limitations": ["Graph incompleteness limits recall", "Modest EM improvement", "Failures arise from missing relations"], "resolves": ["Multi-hop composition challenge", "Does not eliminate unsupported claims"]}

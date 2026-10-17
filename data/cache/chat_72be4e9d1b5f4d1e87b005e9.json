@@ -1,0 +1,1 @@
+{"proposes": [], "uses": ["Hallucination Reduction", "FactProbe", "ClinHalluEval", "CuraLM-70B", "SmallRAG", "SubGround", "GraphVerify", "Relational Fact Lattice"], "datasets": ["FactProbe", "ClinHalluEval"], "tasks": ["Hallucination Reduction"]}

@@ -1,0 +1,1 @@
+{"proposes": ["PocketClinic"], "uses": ["LoRA-QA", "CuraLM-70B", "Small Language Model"], "datasets": ["MedQA"], "tasks": ["Medical QA", "Hallucination Reduction"]}

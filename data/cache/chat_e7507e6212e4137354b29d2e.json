@@ -1,0 +1,1 @@
+{"proposes": ["ClinoKG"], "uses": ["RelForge", "Knowledge Graph"], "datasets": ["PubMed Abstracts"], "tasks": ["Knowledge Graph Construction"], "limitations": ["Better handling of speculation", "Cross-sentence evidence challenges"], "resolves": []}

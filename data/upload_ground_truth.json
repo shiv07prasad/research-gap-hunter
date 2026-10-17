@@ -1,0 +1,153 @@
+[
+  {
+    "id": "P17",
+    "pdf_file": "P17.pdf",
+    "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators",
+    "year": 2022,
+    "authors": [
+      {
+        "name": "Priya Raman",
+        "institution": "Fjordline Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P02",
+        "intent": "method",
+        "title": "RelForge: Neural Relation Extraction for Automatic Knowledge Graph Construction"
+      }
+    ],
+    "ground_truth": {
+      "proposes": [
+        "Relational Fact Lattice"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "Small Language Model",
+        "RelForge"
+      ],
+      "datasets": [
+        "RxInteract-5K"
+      ],
+      "tasks": [
+        "Drug Interaction Lookup",
+        "Hallucination Reduction"
+      ]
+    }
+  },
+  {
+    "id": "P18",
+    "pdf_file": "P18.pdf",
+    "title": "CuraGraph: Knowledge Graph-Grounded Medical Question Answering with Large Language Models",
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Tomas Reyes",
+        "institution": "Halden Medical Institute"
+      },
+      {
+        "name": "Daniel Osei",
+        "institution": "Halden Medical Institute"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P06",
+        "intent": "method",
+        "title": "SubGround: Retrieving Query-Specific Subgraphs to Ground Language Model Answers"
+      },
+      {
+        "id": "P08",
+        "intent": "method",
+        "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification"
+      },
+      {
+        "id": "P10",
+        "intent": "method",
+        "title": "ClinoKG: Constructing a Medical Knowledge Graph from Biomedical Literature"
+      },
+      {
+        "id": "P11",
+        "intent": "result",
+        "title": "MedRetGen: Retrieval-Augmented Generation for Medical Question Answering"
+      },
+      {
+        "id": "P17",
+        "intent": "background",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ],
+    "ground_truth": {
+      "proposes": [
+        "CuraGraph"
+      ],
+      "uses": [
+        "Knowledge Graph",
+        "ClinoKG",
+        "SubGround",
+        "GraphVerify",
+        "CuraLM-70B"
+      ],
+      "datasets": [
+        "PubMedQA"
+      ],
+      "tasks": [
+        "Medical QA",
+        "Hallucination Reduction"
+      ]
+    }
+  },
+  {
+    "id": "P19",
+    "pdf_file": "P19.pdf",
+    "title": "TinyVeri: Knowledge Graph Verification for 3B-Parameter Language Models",
+    "year": 2025,
+    "authors": [
+      {
+        "name": "Ravi Menon",
+        "institution": "Northbridge University"
+      },
+      {
+        "name": "Jonah Pierce",
+        "institution": "Kestrel AI Lab"
+      }
+    ],
+    "cites": [
+      {
+        "id": "P08",
+        "intent": "method",
+        "title": "GraphVerify: Reducing Hallucination through Knowledge Graph Fact Verification"
+      },
+      {
+        "id": "P15",
+        "intent": "method",
+        "title": "SmallRAG: When Compact Models with Retrieval Outperform Large Models"
+      },
+      {
+        "id": "P17",
+        "intent": "method",
+        "title": "Relational Fact Lattices for Grounding Compact Clinical Text Generators"
+      }
+    ],
+    "ground_truth": {
+      "proposes": [
+        "TinyVeri"
+      ],
+      "uses": [
+        "GraphVerify",
+        "Knowledge Graph",
+        "Small Language Model",
+        "SmallRAG",
+        "Relational Fact Lattice"
+      ],
+      "datasets": [
+        "HotpotQA",
+        "FactProbe"
+      ],
+      "tasks": [
+        "Hallucination Reduction",
+        "Multi-hop QA"
+      ]
+    }
+  }
+]

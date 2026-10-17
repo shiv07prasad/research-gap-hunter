@@ -1,0 +1,1 @@
+{"proposes": ["MedRetGen"], "uses": ["RetGen", "DenseRet", "CuraLM-70B", "Retrieval-augmented generation", "Large Language Model"], "datasets": ["MedQA", "PubMedQA"], "tasks": ["Medical QA", "Hallucination Reduction"]}

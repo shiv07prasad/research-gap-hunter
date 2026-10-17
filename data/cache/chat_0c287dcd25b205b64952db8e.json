@@ -1,0 +1,1 @@
+{"proposes": ["MedRetGen"], "uses": ["DenseRet", "RetGen", "CuraLM-70B"], "datasets": ["MedQA", "PubMedQA"], "tasks": ["Medical QA"]}

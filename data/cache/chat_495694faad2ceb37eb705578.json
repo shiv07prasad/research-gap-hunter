@@ -1,0 +1,1 @@
+{"proposes": ["DenseRet"], "uses": ["Dual Encoder", "Contrastive Learning", "Large Language Model"], "datasets": ["Natural Questions"], "tasks": ["Open-domain QA", "Passage Retrieval", "Hallucination Reduction"], "limitations": ["Limited to fixed input lengths", "Requires large training data"], "resolves": []}

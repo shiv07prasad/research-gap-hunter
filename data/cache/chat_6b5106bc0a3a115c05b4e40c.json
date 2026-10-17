@@ -1,0 +1,1 @@
+{"proposes": ["GraphHop"], "uses": ["RelForge", "RetGen", "Knowledge Graph", "Retrieval-augmented generation"], "datasets": ["HotpotQA"], "tasks": ["Multi-hop QA", "Hallucination Reduction"], "limitations": ["Errors in long sentences", "Difficult entity boundaries"], "resolves": ["unlike previous methods, our model integrates retrieval with generation"]}
