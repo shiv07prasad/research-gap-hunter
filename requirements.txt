@@ -1,0 +1,3 @@
+# Installed by Hugging Face Spaces (next to Gradio, which the Space SDK provides).
+# Same pins as backend/requirements.txt.
+-r backend/requirements.txt

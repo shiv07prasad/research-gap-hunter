@@ -3,8 +3,10 @@ title: Research Gap Hunter
 emoji: 🧭
 colorFrom: green
 colorTo: indigo
-sdk: docker
-app_port: 7860
+sdk: gradio
+sdk_version: 6.30.0
+python_version: "3.10"
+app_file: app.py
 pinned: false
 short_description: Graph + AI novelty check for research ideas
 ---
@@ -125,13 +127,16 @@ cd backend
 
 ## Deployment (Hugging Face Spaces)
 
-The repo root is a Docker Space: the `Dockerfile` builds the React app and runs FastAPI on
-port 7860, which serves both the UI and `/api`. Neo4j stays on Aura.
+Docker Spaces need a paid plan, so the repo is set up as a **free Gradio-SDK Space**: the
+Space runs `app.py`, which starts our FastAPI app on port 7860. FastAPI serves `/api` and the
+React UI from `frontend/dist`, which is committed prebuilt (there is no build step on the
+Space). Neo4j stays on Aura. The `Dockerfile` is kept for other hosts (Render, Cloud Run).
 
-1. Create a Space with the **Docker** SDK (blank template).
+1. Create a Space with the **Gradio** SDK (blank template, CPU basic).
 2. In the Space's **Settings → Variables and secrets**, add secrets:
    `OPENAI_API_KEY`, `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`.
-3. Push this repo to the Space (`git push space main`). PDFs go through Git LFS
+3. After any frontend change, rebuild before committing: `cd frontend && npm run build`.
+4. Push this repo to the Space (`git push space main`). PDFs go through Git LFS
    (see `.gitattributes`). The build takes a few minutes; logs are in the Space's **Logs** tab.
 
 `data/cache/` is committed on purpose: it holds the rehearsed LLM results, so the deployed
