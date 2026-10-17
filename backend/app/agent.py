@@ -14,7 +14,16 @@ SCHEMA = """Graph schema:
 (Paper)-[:PROPOSES|USES]->(Method), (Paper)-[:EVALUATES_ON]->(Dataset), (Paper)-[:ADDRESSES]->(Task)
 (Paper)-[:HAS_LIMITATION]->(Limitation)<-[:RESOLVES]-(later Paper that overcomes it)
 Stub papers (is_stub = true) are cited by others but their text is not loaded yet.
-Entity `key` is the lowercased name; match names case-insensitively with toLower()."""
+
+Cypher rules:
+- Names are case-sensitive in the data ("RelForge", "MedQA", "LoRA-QA"). NEVER match a name with
+  a literal property map like {name: 'relforge'}. Always compare case-insensitively:
+    MATCH (m:Method) WHERE toLower(m.name) = toLower('RelForge')
+  Use CONTAINS for partial names:  WHERE toLower(p.title) CONTAINS 'graph'
+- "Papers that use X" means PROPOSES or USES: (p:Paper)-[:PROPOSES|USES]->(m)
+- If a query returns nothing or a count of 0, do not conclude "none" yet: first search the name
+  loosely, e.g. MATCH (n) WHERE toLower(n.name) CONTAINS 'relforge' RETURN labels(n), n.name,
+  then retry with the exact stored name and label."""
 
 SYSTEM = f"""You are a research assistant answering questions about a graph of research papers.
 Use the tools to look things up before answering; never invent papers.
@@ -135,8 +144,9 @@ def ask(question: str, max_steps: int = 6) -> dict:
                 "highlight_nodes": sorted(_path_nodes(paths))}
 
     for _ in range(max_steps):
+        # the agent writes its own Cypher: the stronger model makes far fewer query mistakes
         resp = llm.client().chat.completions.create(
-            model=config.OPENAI_CHAT_MODEL, messages=messages, tools=TOOLS, temperature=0
+            model=config.OPENAI_AGENT_MODEL, messages=messages, tools=TOOLS, temperature=0
         )
         msg = resp.choices[0].message
         if not msg.tool_calls:

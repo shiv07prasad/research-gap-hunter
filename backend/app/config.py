@@ -15,6 +15,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
 # stronger model for the one judgment the small model gets wrong (does paper B fix A's weakness?)
 OPENAI_JUDGE_MODEL = os.getenv("OPENAI_JUDGE_MODEL", "gpt-4o")
+# the Q&A agent writes Cypher on the fly; the small model gets names/relationships wrong too often
+OPENAI_AGENT_MODEL = os.getenv("OPENAI_AGENT_MODEL", "gpt-4o")
 OPENAI_EMBED_MODEL = os.getenv("OPENAI_EMBED_MODEL", "text-embedding-3-small")
 EMBED_DIMENSIONS = 1536  # text-embedding-3-small
 
