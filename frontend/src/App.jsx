@@ -31,6 +31,7 @@ export default function App() {
   const [toast, setToast] = useState(null);
   const positions = useRef(new Map());
   const toastTimer = useRef(null);
+  const advanceTimer = useRef(null);
 
   const refresh = useCallback(async () => {
     const [g, s] = await Promise.all([api.graph(), api.stats()]);
@@ -88,8 +89,13 @@ export default function App() {
     await refresh();
   };
 
-  const onUploadsFinished = (anySuccess) => {
-    if (anySuccess) completeStep(1);
+  // Step 1 completes on its own only when every sample paper is in the graph; the short
+  // pause lets the viewer see the upload results before the next step opens.
+  const onUploadsFinished = (anySuccess, remaining) => {
+    if (anySuccess && remaining === 0) {
+      clearTimeout(advanceTimer.current);
+      advanceTimer.current = setTimeout(() => completeStep(1), 1500);
+    }
   };
 
   const onNovelty = (r) => {
@@ -108,6 +114,7 @@ export default function App() {
 
   const onReset = async () => {
     if (!window.confirm("Remove all live-uploaded papers and restore the starting graph?")) return;
+    clearTimeout(advanceTimer.current);
     await api.resetDemo();
     setNewNodes(new Set());
     setNewLinks(new Set());
@@ -142,7 +149,7 @@ export default function App() {
             summary={done[1] ? "Papers added — the graph grew. Add more any time." : "Add the 3 sample papers or drop a PDF."}
             onOpen={() => setActiveStep(1)}
           >
-            <UploadStep onUploaded={onUploaded} onFinished={onUploadsFinished} glow={stepState(1) === "active"} />
+            <UploadStep onUploaded={onUploaded} onFinished={onUploadsFinished} onContinue={() => completeStep(1)} glow={stepState(1) === "active"} />
           </StepCard>
 
           <StepCard

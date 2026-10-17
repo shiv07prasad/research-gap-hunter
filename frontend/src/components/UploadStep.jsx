@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { CircleCheck, FileText, LoaderCircle, Plus, Upload } from "lucide-react";
+import { ArrowRight, CircleCheck, FileText, LoaderCircle, Plus, Upload } from "lucide-react";
 import { api } from "../api.js";
 
-export default function UploadStep({ onUploaded, onFinished, glow }) {
+export default function UploadStep({ onUploaded, onFinished, onContinue, glow }) {
   const inputRef = useRef(null);
   const [samples, setSamples] = useState([]);
   const [working, setWorking] = useState({}); // file -> true while uploading
@@ -10,7 +10,11 @@ export default function UploadStep({ onUploaded, onFinished, glow }) {
   const [dragging, setDragging] = useState(false);
   const busy = Object.values(working).some(Boolean);
 
-  const loadSamples = () => api.samples().then(setSamples);
+  const loadSamples = () =>
+    api.samples().then((list) => {
+      setSamples(list);
+      return list;
+    });
   // retry until the backend is up (it may still be starting when the page loads)
   useEffect(() => {
     let timer;
@@ -37,8 +41,10 @@ export default function UploadStep({ onUploaded, onFinished, glow }) {
         setWorking((w) => ({ ...w, [key]: false }));
       }
     }
-    await loadSamples().catch(() => {});
-    onFinished(anySuccess);
+    const list = await loadSamples().catch(() => null);
+    // the step only completes by itself once every sample paper is in the graph
+    const remaining = (list ?? []).filter((s) => !s.in_graph).length;
+    onFinished(anySuccess, list ? remaining : 1);
   };
 
   const pending = samples.filter((s) => !s.in_graph);
@@ -81,7 +87,17 @@ export default function UploadStep({ onUploaded, onFinished, glow }) {
       {pending.length > 0 && (
         <button className={`btn primary block ${glow && !busy ? "glow-target" : ""}`} disabled={busy} onClick={() => addSamples(pending)}>
           {busy ? <LoaderCircle size={15} className="spin" /> : <Upload size={15} />}
-          {busy ? "Adding papers…" : `Add ${pending.length === samples.length ? "all " : ""}${pending.length} sample paper${pending.length > 1 ? "s" : ""}`}
+          {busy
+            ? "Adding papers…"
+            : pending.length === samples.length
+              ? `Add all ${pending.length} sample papers`
+              : `Add ${pending.length} remaining sample paper${pending.length > 1 ? "s" : ""}`}
+        </button>
+      )}
+
+      {!busy && samples.length > 0 && pending.length < samples.length && (
+        <button className="btn sm ghost block" onClick={onContinue}>
+          {pending.length === 0 ? "All papers added — continue to step 2" : "Continue to step 2"} <ArrowRight size={13} />
         </button>
       )}
 
