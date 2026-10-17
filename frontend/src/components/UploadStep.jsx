@@ -84,21 +84,19 @@ export default function UploadStep({ onUploaded, onFinished, onContinue, glow })
         ))}
       </div>
 
-      {pending.length > 0 && (
+      {/* Before anything is added: one button for all samples. After that, the main
+          action is moving on; remaining papers can still be added with their own buttons. */}
+      {(busy || pending.length === samples.length) && pending.length > 0 ? (
         <button className={`btn primary block ${glow && !busy ? "glow-target" : ""}`} disabled={busy} onClick={() => addSamples(pending)}>
           {busy ? <LoaderCircle size={15} className="spin" /> : <Upload size={15} />}
-          {busy
-            ? "Adding papers…"
-            : pending.length === samples.length
-              ? `Add all ${pending.length} sample papers`
-              : `Add ${pending.length} remaining sample paper${pending.length > 1 ? "s" : ""}`}
+          {busy ? "Adding papers…" : `Add all ${pending.length} sample papers`}
         </button>
-      )}
-
-      {!busy && samples.length > 0 && pending.length < samples.length && (
-        <button className="btn sm ghost block" onClick={onContinue}>
-          {pending.length === 0 ? "All papers added — continue to step 2" : "Continue to step 2"} <ArrowRight size={13} />
-        </button>
+      ) : (
+        samples.length > 0 && (
+          <button className={`btn primary block ${glow ? "glow-target" : ""}`} onClick={onContinue}>
+            Continue to step 2 <ArrowRight size={15} />
+          </button>
+        )
       )}
 
       <div
