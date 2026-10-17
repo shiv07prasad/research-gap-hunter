@@ -1,0 +1,19 @@
+# Render Blueprint: one free Docker web service (UI + API). Neo4j stays on Aura.
+# Secrets are not stored here; Render asks for their values when the Blueprint is created.
+services:
+  - type: web
+    name: research-gap-hunter
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: NEO4J_URI
+        sync: false
+      - key: NEO4J_USERNAME
+        sync: false
+      - key: NEO4J_PASSWORD
+        sync: false

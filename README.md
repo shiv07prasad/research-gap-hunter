@@ -125,20 +125,24 @@ cd backend
 | POST | /api/ask | `{question}` → agent answer (read-only Cypher + vector search) |
 | POST | /api/reset-demo | remove live uploads, restore stubs |
 
-## Deployment (Hugging Face Spaces)
+## Deployment (Render)
 
-Docker Spaces need a paid plan, so the repo is set up as a **free Gradio-SDK Space**: the
-Space runs `app.py`, which starts our FastAPI app on port 7860. FastAPI serves `/api` and the
-React UI from `frontend/dist`, which is committed prebuilt (there is no build step on the
-Space). Neo4j stays on Aura. The `Dockerfile` is kept for other hosts (Render, Cloud Run).
+The app deploys as one Docker web service on Render's free plan (`render.yaml` + `Dockerfile`):
+the image builds the React app and runs FastAPI, which serves `/api` and the UI on Render's
+`$PORT`. Neo4j stays on Aura.
 
-1. Create a Space with the **Gradio** SDK (blank template, CPU basic).
-2. In the Space's **Settings → Variables and secrets**, add secrets:
-   `OPENAI_API_KEY`, `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`.
-3. After any frontend change, rebuild before committing: `cd frontend && npm run build`.
-4. Push this repo to the Space (`git push space main`). PDFs go through Git LFS
-   (see `.gitattributes`). The build takes a few minutes; logs are in the Space's **Logs** tab.
+1. Push this repo to GitHub.
+2. In Render: **New → Blueprint**, pick the repo; Render reads `render.yaml`.
+3. Enter the secret values when asked: `OPENAI_API_KEY`, `NEO4J_URI`, `NEO4J_USERNAME`,
+   `NEO4J_PASSWORD`.
+4. Every push to `main` redeploys. Build logs are in the service's **Logs** tab.
+
+The free plan sleeps after 15 minutes without traffic and takes about a minute to wake up:
+open the URL a few minutes before a demo.
 
 `data/cache/` is committed on purpose: it holds the rehearsed LLM results, so the deployed
 demo gives the same answers and repeat runs cost nothing. The app is public, so keep an
 OpenAI budget cap in place.
+
+(`app.py`, the root `requirements.txt` and the README header are for a Hugging Face Space,
+which now needs a paid plan for non-GPU apps.)

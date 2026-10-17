@@ -1,5 +1,6 @@
 # Research Gap Hunter: one container that serves the React UI and the FastAPI backend.
-# Built and run by Hugging Face Spaces (Docker SDK). Secrets come from the Space settings:
+# Deployed on Render (see render.yaml); also works on any Docker host. Secrets come from
+# the host's environment settings:
 #   OPENAI_API_KEY, NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
 
 # --- 1) build the React frontend ---
@@ -24,4 +25,5 @@ COPY --from=frontend --chown=user /build/dist frontend/dist
 USER user
 ENV PYTHONUNBUFFERED=1
 EXPOSE 7860
-CMD ["python", "-m", "uvicorn", "app.main:app", "--app-dir", "backend", "--host", "0.0.0.0", "--port", "7860"]
+# Render tells the app which port to use through $PORT; default to 7860 elsewhere
+CMD ["sh", "-c", "python -m uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port ${PORT:-7860}"]
